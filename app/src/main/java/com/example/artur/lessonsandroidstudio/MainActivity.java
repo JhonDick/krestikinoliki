@@ -10,14 +10,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity  implements OnClickListener{
-    Button butStart;
+    private Button butStart;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        butStart = (Button)findViewById(R.id.butStart);
+        butStart = findViewById(R.id.butStart);
         butStart.setOnClickListener(this);
 
 
@@ -29,8 +29,7 @@ public class MainActivity extends Activity  implements OnClickListener{
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(this, GameKrestiki.class);
-        startActivity(intent);
+        startActivity( new Intent(this, GameKrestiki.class));
 
     }
 }
