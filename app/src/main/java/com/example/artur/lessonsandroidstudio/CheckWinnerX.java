@@ -18,18 +18,15 @@ public class CheckWinnerX {
         checkWinnnerHorizontal(charsd, activity);
 
     }
-    public void checkWinnerVertical(String[][] charsd, Activity activity){
+    public void checkWinnerVertical(String[][] charsd, Activity activity){ //Не красиво тут активити смотрится
         int counter;
         for(int i = 0; i<3;i++){
             counter = 0;
             for( int j = 0; j<3; j++){
-                if(charsd[j][i]=="x"){
+                if(charsd[j][i]=="x"){ //нельзя так сравнивать строки!!! для этого есть equals
                     counter++;
                     if(counter == 3){
                         startSelectedActivity(activity);
-
-
-
                     }
                 }
             }
@@ -87,7 +84,7 @@ public class CheckWinnerX {
 
 
 
-    public void startSelectedActivity(Activity activity
+    public void startSelectedActivity(Activity activity //Зачем 2 активити если достаточно 1 и передавать данные кто именно победил
     ){
         Intent intent = new Intent(activity, Win.class);
         activity.startActivity(intent);

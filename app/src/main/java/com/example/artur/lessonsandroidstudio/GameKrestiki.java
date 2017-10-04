@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class GameKrestiki extends Activity implements OnClickListener {
-    Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+    Button b1, b2, b3, b4, b5, b6, b7, b8, b9; // Попахивает говнокодом вынести в лист или в масив (RecycleView почитай там есть грид )
 
     boolean check = true;
     CharsContain showChar = new CharsContain();
@@ -30,7 +30,7 @@ public class GameKrestiki extends Activity implements OnClickListener {
 
 
     public void CreateGame(){
-
+// Попахивает говнокодом
         b1 = (Button) findViewById(R.id.b1);
         b2 = (Button) findViewById(R.id.b2);
         b3 = (Button) findViewById(R.id.b3);
@@ -43,6 +43,7 @@ public class GameKrestiki extends Activity implements OnClickListener {
 
 
 
+// Попахивает говнокодом было бы листом прогнал циклом
 
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
@@ -61,13 +62,14 @@ public class GameKrestiki extends Activity implements OnClickListener {
     @Override
     public void onClick(View view) {
 
+// Попахивает говнокодом можно вынести в метод
 
         if (view.getId() == R.id.b1) {
-            if (check == true) {
+            if (check == true) { // можно просто оставить переменную чек она и так бул
                 b1.setText("o");
                 check = false;
                 b1.setClickable(false);
-                showChar.chars[0][0] = "o";
+                showChar.chars[0][0] = "o";// магические числа  + о вынести в константу , вдруг ты ее захочешь поменять на 0  например
                 winnerX.checkWinnerX(showChar.chars, this);
                 winnerO.checkWinnerO(showChar.chars, this);
             }

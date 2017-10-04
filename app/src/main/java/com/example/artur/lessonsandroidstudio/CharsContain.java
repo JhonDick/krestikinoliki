@@ -8,7 +8,6 @@ public class CharsContain {
     String[][] chars;
     public CharsContain(){
         chars = new String[3][3];
-
     }
 
 

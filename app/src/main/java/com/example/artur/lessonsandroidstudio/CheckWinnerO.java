@@ -16,7 +16,7 @@ public class CheckWinnerO {
         checkWinnnerHorizontal(charsd, activity);
 
     }
-    public void checkWinnerVertical(String[][] charsd, Activity activity){
+    public void checkWinnerVertical(String[][] charsd, Activity activity){ // Дублирование класа для "О" и "Х"
         int counter;
         for(int i = 0; i<3;i++){
             counter = 0;
