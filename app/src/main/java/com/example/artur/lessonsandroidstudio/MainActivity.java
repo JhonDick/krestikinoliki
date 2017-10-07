@@ -8,17 +8,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.GridView;
+import android.widget.TextView;
 
-public class MainActivity extends Activity  implements OnClickListener{
-    Button butStart;
+public class MainActivity extends Activity{
+    static TextView textView;
+    String data[] = new String[9];
+    GridView gridView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        butStart = (Button)findViewById(R.id.butStart);
-        butStart.setOnClickListener(this);
+        textView = findViewById(R.id.textView);
+        gridView = findViewById(R.id.gvMain);
+        MyAdapter adapter = new MyAdapter(this,data);
+        gridView.setAdapter(adapter);
 
 
 
@@ -27,10 +33,5 @@ public class MainActivity extends Activity  implements OnClickListener{
 
     }
 
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(this, GameKrestiki.class);
-        startActivity(intent);
 
-    }
 }

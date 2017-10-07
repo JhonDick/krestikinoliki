@@ -16,9 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameKrestiki" />
-        <activity android:name=".Win" />
-        <activity android:name=".WinO"></activity>
     </application>
 
 </manifest>
