@@ -9,7 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/databaselearn" />
             <option value="$PROJECT_DIR$/listviewlearn" />
+            <option value="$PROJECT_DIR$/teacherhelper" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

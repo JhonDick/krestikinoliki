@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LessonsAndroidStudio.iml" filepath="$PROJECT_DIR$/LessonsAndroidStudio.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databaselearn/databaselearn.iml" filepath="$PROJECT_DIR$/databaselearn/databaselearn.iml" />
       <module fileurl="file://$PROJECT_DIR$/listviewlearn/listviewlearn.iml" filepath="$PROJECT_DIR$/listviewlearn/listviewlearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/teacherhelper/teacherhelper.iml" filepath="$PROJECT_DIR$/teacherhelper/teacherhelper.iml" />
     </modules>
   </component>
 </project>
