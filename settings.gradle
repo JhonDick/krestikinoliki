@@ -1,1 +1,1 @@
-include ':app', ':listviewlearn'
+include ':app', ':listviewlearn', ':databaselearn', ':teacherhelper'

@@ -24,6 +24,7 @@ import java.util.List;
 public class MyAdapter extends ArrayAdapter<String>{
     boolean check = true;
     CheckWinner winner = new CheckWinner();
+    Resourses square = new Resourses();
     Context context;
 
 
@@ -56,98 +57,123 @@ public class MyAdapter extends ArrayAdapter<String>{
 
                if(position == 0){
                    if(check){
+                       check = false;
 
-                       winner.charsd[0][0] = "o";
-                       ShowMessageWin(holder.button,check,"o");
+
+                       square.square[0][0] = "o";
+                       ShowMessageWin(holder.button,"o");
+                       winner.checkWinner(square.square);
                        
                    }else{
-                         
-                         winner.charsd[0][0] = "x";
-                         ShowMessageWin(holder.button,check,"x");
+                         check = true;
+                         square.square[0][0] = "x";
+                         ShowMessageWin(holder.button,"x");
+                         winner.checkWinner(square.square);
                        
                }}
                 if(position == 1){
                     if(check){
-                        
-                        winner.charsd[0][1] = "o";
-                        ShowMessageWin(holder.button,check,"o");
+                        check = false;
+                        square.square[0][1] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
                         
                     }else{
-                        winner.charsd[0][1] = "x";
-                        ShowMessageWin(holder.button,check,"x");
+                        check = true;
+                        square.square[0][1] = "x";
+                        ShowMessageWin(holder.button,"x");
+                        winner.checkWinner(square.square);
                         
                 }}
                 if(position == 2){
                     if(check){
-                        
-                        winner.charsd[0][2] = "o";
-                        ShowMessageWin(holder.button,check,"o");
-                    }else{winner.charsd[0][2] = "x";
-                          ShowMessageWin(holder.button,check,"x");
+                        check = false;
+                        square.square[0][2] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
+                    }else{check = true;
+                         square.square[0][2] = "x";
+                          ShowMessageWin(holder.button,"x");
+                          winner.checkWinner(square.square);
                         
                 }}
                 if(position == 3){
                     if(check){
-                        
-                        winner.charsd[1][0] = "o";
-                        ShowMessageWin(holder.button,check,"o");
+                        check = false;
+                        square.square[1][0] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
                     }else{
-                        winner.charsd[1][0] = "x";
-                        ShowMessageWin(holder.button,check,"x");
+                        check = true;
+                        square.square[1][0] = "x";
+                        ShowMessageWin(holder.button,"x");
+                        winner.checkWinner(square.square);
                         
                 }}
                 if(position == 4){
                     if(check){
-                        
-                        winner.charsd[1][1] = "o";
-                        ShowMessageWin(holder.button,check,"o");
+                        check = false;
+                        square.square[1][1] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
                     }else{
-                        
-                        winner.charsd[1][1] = "x";
-                        ShowMessageWin(holder.button,check,"x");
+                        check = true;
+                        square.square[1][1] = "x";
+                        ShowMessageWin(holder.button,"x");
+                        winner.checkWinner(square.square);
                         }
                 }
                 if(position == 5){
                     if(check){
-                        
-                        winner.charsd[1][2] = "o";
-                        ShowMessageWin(holder.button,check,"o");
-                    }else{holder.button.setText("x");
-                        
-                        winner.charsd[1][2] = "x";
-                        ShowMessageWin(holder.button,check,"x");
+                        check = false;
+                        square.square[1][2] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
+                    }else{
+                        check = true;
+                        square.square[1][2] = "x";
+                        ShowMessageWin(holder.button,"x");
+                        winner.checkWinner(square.square);
                         }
                 }
                 if(position == 6){
                     if(check){
-                        
-                        winner.charsd[2][0] = "o";
-                        ShowMessageWin(holder.button,check,"o");
+                        check = false;
+                        square.square[2][0] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
                         
                     }else{
-                        
-                        winner.charsd[2][0] = "x";
-                        ShowMessageWin(holder.button,check,"x");}
+                        check = true;
+                        square.square[2][0] = "x";
+                        ShowMessageWin(holder.button,"x");
+                        winner.checkWinner(square.square);}
                 }
                 if(position == 7){
                     if(check){
-                        
-                        winner.charsd[2][1] = "o";
-                        ShowMessageWin(holder.button,check,"o");
+                        check = false;
+                        square.square[2][1] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
                         
                     }else{
-                        
-                        winner.charsd[2][1] = "x";
-                        ShowMessageWin(holder.button,check,"x");}
+                        check = true;
+                        square.square[2][1] = "x";
+                        ShowMessageWin(holder.button,"x");
+                        winner.checkWinner(square.square);}
                 }
                 if(position == 8){
                     if(check){
-                        
-                        winner.charsd[2][2] = "o";
-                        ShowMessageWin(holder.button,check,"o");
+                        check = false;
+                        square.square[2][2] = "o";
+                        ShowMessageWin(holder.button,"o");
+                        winner.checkWinner(square.square);
                     }else{
-                        winner.charsd[2][2] = "x";
-                        ShowMessageWin(holder.button,check,"x");}
+                        check = true;
+                        square.square[2][2] = "x";
+
+                        ShowMessageWin(holder.button,"x");
+                        winner.checkWinner(square.square);}
                 }
 
 
@@ -161,25 +187,17 @@ public class MyAdapter extends ArrayAdapter<String>{
         return  convertView;
 
     }
-    public void ShowMessageWin(Button btn, boolean check, String text){
+    public void ShowMessageWin(Button btn, String text){
 
 
 
-        if(check){
-            check=false;
-        }else{check = true;}
+
         btn.setText(text);
         btn.setClickable(false);
-
-        int[] mass = (int[])winner.checkWinner(winner.charsd);
-        for(int countWin: mass){
-           switch (countWin){
-               case 0: MainActivity.textView.setText("Победили нолики");break;
-               case 1: MainActivity.textView.setText("Победили крестики");break;
-
-           }
-
-    }
+       // winner.checkWinner(square.square);
 
 
-}}
+}
+    public void ResetGame(){
+
+    }}
